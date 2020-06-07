@@ -17,14 +17,16 @@ def find_word(target_word: str) -> None:
             continue
         else:
             counter = 0
+            
             while counter < target_word_length:
                 target_letter = target_word[counter]
                 if target_letter != "*":
                     if target_letter != suspect_word[counter]:
                         break
-                if counter == target_word_length-1:
-                    hit_list.append([suspect_word, len(suspect_word)])
                 counter += 1
+                
+            if counter == target_word_length-1:
+                hit_list.append([suspect_word, len(suspect_word)])
 
 
 find_word("v**en")
