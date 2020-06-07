@@ -25,7 +25,7 @@ def find_word(target_word: str) -> None:
                         break
                 counter += 1
                 
-            if counter == target_word_length-1:
+            if counter == target_word_length:
                 hit_list.append([suspect_word, len(suspect_word)])
 
 
